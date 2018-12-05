@@ -29,46 +29,15 @@ body form {
   color: #15c5bd;
   line-height: 3vh;
 }
-@media screen and (max-width: 768px) {
-  body form .logo {
-    opacity: 0;
-    position: absolute;
-    left: 20vh;
-  }
-}
-@media screen and (max-width: 1440px) {
-  body form .logo {
-    opacity: 0;
-    position: absolute;
-    left: 95vh;
-    top: -70px !important;
-    overflow: hidden;
-  }
-}
-@media screen and (max-width: 1024px) {
-  body form .logo {
-    opacity: 1;
-    position: absolute;
-    left: 60vh;
-  }
-}
-@media screen and (max-width: 2560px) {
-  body form .logo {
-    opacity: 0;
-    height: 50vh;
-    width: 50vh;
-    position: absolute;
-    left: 100vh;
-    top: 5vh;
-  }
-}
-body form .logo {
-  opacity: 1;
-  height: 50vh;
-  width: 50vh;
+body form div.logo1 {
+  height: 100vh;
+  width: 100vw;
   position: absolute;
-  right: 58vh;
-  top: 2vh;
+  display: flex;
+}
+body form div.logo1 .logo {
+  opacity: 0.5;
+  margin: auto;
 }
 body form .marginpadding {
   border-radius: 15vh;
@@ -94,6 +63,9 @@ body form .backgroundtext:active {
   background-color: #303030;
 }
 body form .backgroundtext:visited {
+  background-color: #303030;
+}
+body form .backgroundtext:focus {
   background-color: #303030;
 }
 body form textarea {

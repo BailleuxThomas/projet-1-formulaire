@@ -1,12 +1,12 @@
-<select class="form-control" type="pays" name="pays" size="1" required>
+<select class="form-control" type="text" name="pays" size="1" required>
     <option disabled selected value>Choisi un pays
-    <option value="AF">Afghanistan
+    <!-- <option value="AF">Afghanistan
     <option value="ZA">Afrique du sud
     <option value="AX">Åland, îles
     <option value="AL">Albanie
-    <option value="DZ">Algérie
+    <option value="DZ">Algérie -->
     <option value="DE">Allemagne
-    <option value="AD">Andorre
+    <!-- <option value="AD">Andorre
     <option value="AO">Angola
     <option value="AI">Anguilla
     <option value="AQ">Antarctique
@@ -22,9 +22,9 @@
     <option value="BH">Bahreïn
     <option value="BD">Bangladesh
     <option value="BB">Barbade
-    <option value="BY">Bélarus
+    <option value="BY">Bélarus -->
     <option value="BE">Belgique
-    <option value="BZ">Belize
+    <!-- <option value="BZ">Belize
     <option value="BJ">Bénin
     <option value="BM">Bermudes
     <option value="BT">Bhoutan
@@ -77,9 +77,9 @@
     <option value="FK">Falkland, îles (malvinas)
     <option value="FO">Féroé, îles
     <option value="FJ">Fidji
-    <option value="FI">Finlande
+    <option value="FI">Finlande -->
     <option value="FR">France
-    <option value="GA">Gabon
+    <!-- <option value="GA">Gabon
     <option value="GM">Gambie
     <option value="GE">Géorgie
     <option value="GS">Géorgie du sud et les îles sandwich du sud
@@ -248,5 +248,5 @@
     <option value="WF">Wallis et futuna
     <option value="YE">Yémen
     <option value="ZM">Zambie
-    <option value="ZW">Zimbabwe​​​​​
+    <option value="ZW">Zimbabwe​​​​​ -->
 </select>
