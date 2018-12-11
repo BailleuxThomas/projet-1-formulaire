@@ -1,4 +1,9 @@
 <?php
+
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
 $options = array(
     'first_name' => FILTER_SANITIZE_STRING,
     'last_Name' => FILTER_SANITIZE_STRING,
@@ -13,52 +18,59 @@ $result = filter_input_array(INPUT_POST, $options);
 // NOM
 
 echo "<h2>Nom:</h2>";
-echo $result[first_name];
-
+if (!empty($_POST['first_name'])) {
+echo $result['first_name'];
+}
 // PRENOM
 
 echo "<h2>Prenom:</h2>";
-echo $result[last_Name];
+if (!empty($_POST['last_Name'])) {
+echo $result['last_Name'];
+}
 
 // EMAIL
 echo "<h2>Mail:</h2>";
-echo $result[mail];
+if (!empty($_POST['mail'])) {
+echo $result['mail'];
+}
 
 // GENRE
 
+if (!empty($_POST['sexe'])) {
 echo "<h2>Genre</h2>";
 
-if ($result[sexe] == 1) {
-    $result[sexe] = "Homme";
+if ($result['sexe'] == 1) {
+    $result['sexe'] = "Homme";
     echo "Homme";
-} elseif ($result[sexe] == 2) {
-    $result[sexe] = "Femme";
+} elseif ($result['sexe'] == 2) {
+    $result['sexe'] = "Femme";
     echo "Femme";
 } else {
-    $result[sexe] = null;
+    $result['sexe'] = null;
     echo "Il a essayé de changer le code";
 }
-
+}
 // PAYS
 
+if (!empty($_POST['pays'])) {
 echo "<h2>Pays</h2>";
 
-if ($result[pays] == BE) {
-    $result[pays] = "Belgique";
+if ($result['pays'] == 'BE') {
+    $result['pays'] = "Belgique";
     echo "Belgique";
-} elseif ($result[pays] == FR) {
-    $result[pays] = "France";
+} elseif ($result['pays'] == 'FR') {
+    $result['pays'] = "France";
     echo "France";
-} elseif ($result[pays] == DE) {
-    $result[pays] = "Allemagne";
+} elseif ($result['pays'] == 'DE') {
+    $result['pays'] = "Allemagne";
     echo "Allemagne";
 } else {
-    $result[pays] = null;
+    $result['pays'] = null;
     echo "Il a essayé de changer le code";
 }
-
+}
 // SUJETS
-
+if (!empty($_POST['subject'])) {
 echo "<h2>Sujet:</h2>";
 if (!empty($_POST['subject'])) {
     // Loop to store and display values of individual checked checkbox.
@@ -77,14 +89,16 @@ if (!empty($_POST['subject'])) {
     echo "<p>Autre</p>";
 }
 echo "<br>";
-
+}
 
 // MESSAGE
-
+if (!empty($_POST['message'])) {
 echo "<h2>Le corps du message</h2>";
-echo $result[message];
+echo $result['message'];
 
 echo "<br><br><br>";
+
+}
 // FIN
 
 if ($result != null and $result != false) {
