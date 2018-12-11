@@ -17,6 +17,7 @@ $result = filter_input_array(INPUT_POST, $options);
 
 // NOM
 
+
 echo "<h2>Nom:</h2>";
 if (!empty($_POST['first_name'])) {
 echo $result['first_name'];
@@ -116,3 +117,14 @@ foreach ($options as $key => $value) {
 }
 echo"<br>";
 echo '<a method="post" href="index.php"> Revenir en arrière</a>';
+
+
+// // To
+// $to = 'thomasbailleux3@hotmail.com';
+ 
+
+// // Function mail()
+// mail($to, $subject, $msg);
+
+
+?>
