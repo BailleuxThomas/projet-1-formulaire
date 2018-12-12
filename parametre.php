@@ -19,26 +19,40 @@ $result = filter_input_array(INPUT_POST, $options);
 
 
 echo "<h2>Nom:</h2>";
-if (!empty($_POST['first_name'])) {
+
+if (!empty(trim($_POST['first_name']))) {
 echo $result['first_name'];
+}
+else {
+    echo 'Veuillez insérrer un nom';
 }
 // PRENOM
 
 echo "<h2>Prenom:</h2>";
-if (!empty($_POST['last_Name'])) {
+if (!empty(trim(($_POST['last_Name'])))) {
 echo $result['last_Name'];
+}
+else {
+    echo 'Veuillez insérrer un prénom';
 }
 
 // EMAIL
 echo "<h2>Mail:</h2>";
-if (!empty($_POST['mail'])) {
+if (!empty(trim(($_POST['mail'])))) {
 echo $result['mail'];
+}
+else {
+    echo 'Veuillez insérrer un email valide!';
 }
 
 // GENRE
 
-if (!empty($_POST['sexe'])) {
+if (!empty(trim(($_POST['sexe'])))) {
 echo "<h2>Genre</h2>";
+}
+else {
+    echo 'Veuillez insérrer un sexe';
+}
 
 if ($result['sexe'] == 1) {
     $result['sexe'] = "Homme";
@@ -50,10 +64,10 @@ if ($result['sexe'] == 1) {
     $result['sexe'] = null;
     echo "Il a essayé de changer le code";
 }
-}
+
 // PAYS
 
-if (!empty($_POST['pays'])) {
+if (!empty(trim(($_POST['pays'])))) {
 echo "<h2>Pays</h2>";
 
 if ($result['pays'] == 'BE') {
@@ -70,6 +84,7 @@ if ($result['pays'] == 'BE') {
     echo "Il a essayé de changer le code";
 }
 }
+echo "<br><br><br>";
 // SUJETS
 if (!empty($_POST['subject'])) {
 echo "<h2>Sujet:</h2>";
@@ -93,13 +108,19 @@ echo "<br>";
 }
 
 // MESSAGE
-if (!empty($_POST['message'])) {
+if (!empty(trim(($_POST['message'])))) {
 echo "<h2>Le corps du message</h2>";
 echo $result['message'];
 
 echo "<br><br><br>";
 
 }
+else {
+    echo "<h2>Le corps du message</h2>";
+    echo "Il faut écrire un message";
+    echo "<br><br><br>";
+}
+
 // FIN
 
 if ($result != null and $result != false) {
